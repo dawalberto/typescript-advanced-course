@@ -1,6 +1,6 @@
 import { Expect, Equal } from ".";
 
-function chooseOne(option1: TODO, option2: TODO): TODO {
+function chooseOne<T, K>(option1: T, option2: K): T | K {
   return Math.random() > 0.5 ? option1 : option2;
 }
 
