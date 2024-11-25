@@ -1,4 +1,4 @@
-import { Expect, Equal } from ".";
+import { Expect, Equal } from "../";
 
 function chooseOne<T, K>(option1: T, option2: K): T | K {
   return Math.random() > 0.5 ? option1 : option2;
