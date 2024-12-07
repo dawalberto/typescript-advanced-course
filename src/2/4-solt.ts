@@ -3,7 +3,8 @@ import { Equal, Expect } from "..";
 /**           This is a type constraint that ensures Obj has an 'id' property.
  *            We'll learn more about it later on.
  *                             👇                      */
-export type OptionalizeId<T extends { id: unknown }> = TODO;
+export type OptionalizeId<T extends { id: unknown }> = Omit<T, "id"> &
+  Partial<Pick<T, "id">>;
 
 // Test case to check OptionalizeId utility type with an object containing id, name, and age properties.
 type result1 = OptionalizeId<{
