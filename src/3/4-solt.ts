@@ -3,7 +3,7 @@ import { Equal, Expect } from "..";
 /**
  * The ConvertTupleToArray type transforms a tuple type into an array of its elements.
  */
-export type ConvertTupleToArray<Tuple extends any[]> = TODO;
+export type ConvertTupleToArray<Tuple extends any[]> = Tuple[number][];
 
 // Test cases to validate the ConvertTupleToArray type
 type result1 = ConvertTupleToArray<[1, 2, 3]>;
